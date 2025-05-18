@@ -16,7 +16,7 @@ def load_and_process(filepath: str, output_path: str = "out.txt"):
     except UnicodeDecodeError:
         text = payload.decode("shift_jis", errors="replace")
 
-    with open(output_path, "w", encoding="shift_jis") as out_file:
+    with open(output_path, "w", encoding="utf-8") as out_file:
         out_file.write(text)
 
 if __name__ == "__main__":
